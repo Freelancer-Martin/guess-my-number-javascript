@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #eee;
+    background-color: #222;
+    /* background-color: #60b347; */
+    height: 50vh;
+
+}
+
+header{
+    position: relative;
+    height: 50vh;
+    border-bottom: 7px solid #eee;
+}
+
+.container{
+    display: flex;
+}
+
+.left-container input, button {
+    padding: 20px;
+    margin: 25px;
+}
+.left-container {
+    padding: 15%;
+}
+
+.right-container   {
+    padding: 20%
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    padding: 5%;
+    padding-top: 12rem;
+    font-size: 50px;
+}
+
+.left {
+    text-align: right;
+    left: 0px;
+    position: absolute;
+    margin: 1rem;
+}
+
+.right {
+    text-align: right;
+    right: 0px;
+    position: absolute;
+    margin: 1rem;
+}
+
+.check-number {
+    padding: 25px;
+    text-align: center;
+    font-size: 74px;
+    background: #eee;
+    color: #333;
+    width: 15rem;
+    padding: 3rem 0rem;
+    text-align: centre;
+    position: relative;
+
+}
+
+.again-button{
+    font-size: 30px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+.between-button{
+    font-size: 20px;
+}
+
+.right-container p {
+    padding: 20px;
+}
+

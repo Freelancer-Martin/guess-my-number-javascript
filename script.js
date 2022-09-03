@@ -146,6 +146,30 @@ console.log(calcAverage(totals ))
 
 */
 
+let checkButton = document.querySelector('.check-button');
+let appliedNumber = document.querySelector('.number');
+let diceNumber = Math.floor(Math.random() * 20);
+let numberValue = document.querySelector('.correct-number');
+
+checkButton.addEventListener("click", getValue)
+
+function getValue()
+{
+    if( diceNumber < appliedNumber )
+    {
+        numberValue.innerHTML= 'Too high'
+    }
+    else if(diceNumber > appliedNumber)
+    {
+        numberValue.innerHTML= 'Too low'
+    }
+
+
+    console.log(diceNumber);
+    console.log(appliedNumber);
+    console.log(diceNumber < appliedNumber);
+}
+
 
 
 

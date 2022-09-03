@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css"
 </head>
 <body>
 <header>
-    <button>Again!</button>
-    <a>(Between 1 and 20)</a>
-    <h1> Guess My Number!</h1>
-    <h1>14</h1>
+    <div class="top-container">
+        <button class="left again-button" >Again!</button>
+        <a class="right between-button">(Between 1 and 20)</a>
+    </div>
+    <h1 class="title center" > Guess My Number!</h1>
+    <h1 class="check-number center" >?</h1>
 
 </header>
 <body>
+<div class="container">
     <div class="left-container">
-
+        <input class="number" ></input>
+        <button class="check-button">Check !</button>
     </div>
     <div class="right-container">
-
+        <p class="correct-number">Correct number!</p>
+        <p class="score" >Score: </p>
+        <p class="highscore ">Highscore: </p>
     </div>
+</div>
 </body>
 </body>
 <script src="script.js"></script>
