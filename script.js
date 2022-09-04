@@ -150,25 +150,56 @@ let checkButton = document.querySelector('.check-button');
 let appliedNumber = document.querySelector('.number');
 let diceNumber = Math.floor(Math.random() * 20);
 let numberValue = document.querySelector('.correct-number');
+let checkNumber = document.querySelector('.check-number')
+let againButton = document.querySelector('.again-button');
+let scoreElement = document.querySelector('.score');
+let score = 20;
+let highscore = document.querySelector('.highscore');
 
-checkButton.addEventListener("click", getValue)
+checkButton.addEventListener("click", getValue);
+againButton.addEventListener('click', resetValue);
+highscore = 0;
+
+function resetValue()
+{
+    numberValue.innerHTML= ''
+    checkNumber.innerHTML = '?'
+    appliedNumber.value = '';
+    document.querySelector('body').style = 'background-color: #222;'
+    numberValue.innerHTML= 'Start Guessing !'
+    diceNumber = Math.floor(Math.random() * 20);
+    scoreElement.innerHTML = 'Score : 20'
+    console.log(diceNumber);
+}
 
 function getValue()
 {
-    if( diceNumber < appliedNumber )
+    if( diceNumber < appliedNumber.value )
     {
-        numberValue.innerHTML= 'Too high'
+        numberValue.innerHTML= 'Too high';
+        score = score - 1;
+        scoreElement.textContent = 'Score: ' + score;
+
     }
-    else if(diceNumber > appliedNumber)
+    else if(diceNumber > appliedNumber.value)
     {
-        numberValue.innerHTML= 'Too low'
+        numberValue.innerHTML= 'Too low';
+        score = score - 1;
+        scoreElement.textContent = 'Score: ' + score;
+    }
+    else {
+        numberValue.innerHTML= 'Correct Number'
+        checkNumber.innerHTML = appliedNumber.value
+        document.querySelector('body').style = 'background-color: green'
+        document.querySelector('.highscore').innerHTML = 'Highscore :' + score
     }
 
 
+
+    console.log(score);
     console.log(diceNumber);
-    console.log(appliedNumber);
-    console.log(diceNumber < appliedNumber);
 }
+
 
 
 
